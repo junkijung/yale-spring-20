@@ -1,5 +1,6 @@
 var currentReading = 1;
-var txtColor = 210;
+var txtColor = 205;
+var txtColor2 = 255;
 //
 //function backtoNormal(onMouse) {
 //  var i = document.getElementById(onMouse);
@@ -58,6 +59,7 @@ function loadHTML() {
     var partyContainer = whichParty + "Container"
     var newDiv = $("<div></div>");
     var newColor = txtColor;
+    var newColor2 = txtColor2;
     
     $(whichContainer).append(newDiv);
     newDiv.attr('id', currentReading);
@@ -67,12 +69,22 @@ function loadHTML() {
     
     if (currentReading == 1) {
     newDiv.attr('style', "padding-left: 100vw; background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, " + txtColor + ", " + txtColor + "));");
-    } else {
+    } else if (txtColor > 5) {
     newColor = txtColor - 50;
     
     newDiv.attr('style', "background-image: linear-gradient(to right, rgb(255, " + txtColor + ", " + txtColor + ") 50%, rgb(255, " + newColor + ", " + newColor + "));");
     
     txtColor = newColor;    
+    }
+    
+    
+    else {
+    
+    newColor2 = txtColor2 - 50;       
+    newDiv.attr('style', "background-image: linear-gradient(to right, rgb(" + txtColor2 + ", 0, 0) 50%, rgb(" + newColor2 + ", 0, 0));");
+    
+    txtColor2 = newColor2; 
+        
     }
     
 
