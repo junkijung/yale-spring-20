@@ -1,5 +1,5 @@
 var currentReading = 1;
-var txtColor = 100;
+var txtColor = 210;
 //
 //function backtoNormal(onMouse) {
 //  var i = document.getElementById(onMouse);
@@ -57,7 +57,7 @@ function loadHTML() {
     var txtid = "article/" + whichParty + currentReading + ".html";
     var partyContainer = whichParty + "Container"
     var newDiv = $("<div></div>");
-
+    var newColor = txtColor;
     
     $(whichContainer).append(newDiv);
     newDiv.attr('id', currentReading);
@@ -66,9 +66,16 @@ function loadHTML() {
     $(currentReadingID).load(txtid);
     
     if (currentReading == 1) {
-    newDiv.attr('style', "padding-left: 100vw; background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, 210, 210));");
+    newDiv.attr('style', "padding-left: 100vw; background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, " + txtColor + ", " + txtColor + "));");
+    } else {
+    newColor = txtColor - 50;
+    
+    newDiv.attr('style', "background-image: linear-gradient(to right, rgb(255, " + txtColor + ", " + txtColor + ") 50%, rgb(255, " + newColor + ", " + newColor + "));");
+    
+    txtColor = newColor;    
     }
-        
+    
+
 
     var scrollWidth = $('.mainContainer').get(0).scrollWidth;
     var clientWidth = $('.mainContainer').get(0).clientWidth;
@@ -77,10 +84,8 @@ function loadHTML() {
     console.log(clientWidth);
     
     currentReading++;
-    txtColor = txtColor + 10;
+
     console.log(txtColor);
-    
-    
     
 }
 
