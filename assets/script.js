@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var currentReading = 1;
 //
 //function backtoNormal(onMouse) {
