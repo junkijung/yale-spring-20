@@ -1,7 +1,13 @@
 @font-face {
-font-family: "Franklin-Gothic";
+font-family: "Franklin-Gothic-Bold";
 src: url("ITCFGothicHvy.otf") format("opentype");
-font-style: heavy;
+font-weight: bold;
+}
+
+@font-face {
+font-family: "Franklin-Gothic-Med";
+src: url("ITCFGothicMed.otf") format("opentype");
+font-weight: medium;
 }
 
 /*
@@ -13,29 +19,40 @@ src: url("Arnhem-Blond.otf") format("opentype");
 
 
 body {
-    font-family: "Franklin-Gothic", Helvetica, sans-serif;
-    padding: 5vh 0 0 0;
+    font-family: "Franklin-Gothic-Bold", Helvetica, sans-serif;
+    font-style: bold;
     font-size: 15vw;
 /*    height: vh;*/
 }
 
+.mainContainer {
+    
+    display: flex;
+/*    position: absolute;*/
+/*    flex-wrap: nowrap;*/
+    overflow-x: auto;
+    background-origin: padding-box;
+/*    height: 94vh;*/
+/*    overflow-y: hidden;*/
+}
+
 .firstContainer {
-    margin: auto;
+    padding-top: 5vh;
+    position: relative;
+/*    margin: auto;*/
+    left: 0;
     width: 90vw;
     height: 90vh;
 }
 
-
 .rep {
-    position: relative;
-    left: 50%;
-    width: 50%;
-    top: -90vh;
-    line-height: 1em;
-/*    overflow-wrap: break-word;*/
+    margin: auto;
+    position: absolute;
+    left: 50vw;
+    width: 48vw;
+    line-height: 0.9em;
     text-align: center;
     text-transform: uppercase;
-/*    vertical-align: middle;*/
 }
 
 .rep:hover {
@@ -44,9 +61,11 @@ body {
 }
 
 .dem {
-    height: 90vh;
-    width: 50%;
-    line-height: 1em;
+    margin: auto;
+    position: absolute;
+    left: 1vw;
+    width: 48vw;
+    line-height: 0.9em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -59,7 +78,7 @@ body {
 .neu {
     position: absolute;
     top: 20vh;
-    left: 40vw;
+    left: 39vw;
     width: 20vw;
     height: 20vh;
 
@@ -83,6 +102,47 @@ body {
     top: 3vh;
     width: 100%;
 }
+
+
+.repContainer {
+        padding-top: 5vh;
+    font-size: 50px;
+    top: 5vh;
+}
+
+.flexContainer {
+    height: 90vh;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+.contents {    
+    padding: 0 15vw 0 15vw;
+}
+
+.contentsTitle {
+    font-size: 4vw;
+    padding-left: 6vw;
+    line-height: 4vw;
+    width: 70%;
+}
+
+.contentsSub {
+    padding-left: 6vw;
+    font-size: 30px;
+    padding-bottom: 1em;
+}
+
+.contentsBody {
+    font-size: 30px;
+    font-family:: 'Franklin-Gothic-Med', Helvetica, sans-serif;
+}
+
+/*
+.contentsWriter {
+    font-size: 
+}
+*/
 
 /*
 

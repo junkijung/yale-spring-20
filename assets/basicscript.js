@@ -1,4 +1,5 @@
 var currentReading = 1;
+var txtColor = 100;
 //
 //function backtoNormal(onMouse) {
 //  var i = document.getElementById(onMouse);
@@ -10,7 +11,6 @@ $("document").ready(function() {
     $(".rep, .dem").fitText(0.4);
     $(".neuTxt").fitText(1.5);
     $(".rep").click(loadHTML);
-//    jQuery(".rep .secondRow").fitText(0.35);
 });
 
 //function changeText(onMouse) {
@@ -18,6 +18,23 @@ $("document").ready(function() {
 //  i.style.display = "inline";
 //}
 
+
+function controlVideo(vidcontrol, divid) {
+var div = document.getElementById(divid);
+var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+iframe.postMessage('{"event":"command","func":"' + vidcontrol + '","args":""}', '*');
+}
+
+function openVideo(inum) {
+  var i = document.getElementById(inum);
+  if (i.style.display == "none") {
+    i.style.display = "block";
+    controlVideo('playVideo', inum);
+  } else {
+    i.style.display = "none";
+    controlVideo('stopVideo', inum);
+  }
+}
 
 
 $(function() {
@@ -35,37 +52,41 @@ $(function() {
 
 function loadHTML() {
     var whichParty = $(this).attr('class');
-    var whichContainer = "." + whichParty + "Container"
+    var whichContainer = ".mainContainer"
     var currentReadingID = "#" + currentReading;
     var txtid = "article/" + whichParty + currentReading + ".html";
+    var partyContainer = whichParty + "Container"
     var newDiv = $("<div></div>");
 
+    
     $(whichContainer).append(newDiv);
     newDiv.attr('id', currentReading);
+    newDiv.attr('class', partyContainer);
+
     $(currentReadingID).load(txtid);
     
-    console.log(txtid);
-//    console.log(txtid);
-//    console.log(currentReading);
+    if (currentReading == 1) {
+    newDiv.attr('style', "padding-left: 100vw; background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(255, 210, 210));");
+    }
+        
+
+    var scrollWidth = $('.mainContainer').get(0).scrollWidth;
+    var clientWidth = $('.mainContainer').get(0).clientWidth;
+    $(".mainContainer").animate({ scrollLeft: scrollWidth}, 1000);
+    console.log(scrollWidth);
+    console.log(clientWidth);
     
-//    var currentScroll = $(".p_container").scrollLeft();
-//    console.log(currentScroll);
-//    
-//   var width = document.getElementById(currentReading).offsetWidth;
-//    console.log(width);
-//    var widthPlus = "+=" + width;
-//  
-    
-//    var scrollPosition = $('.p_container').scrollLeft();
-//    var boxPLeft = parseInt($(boxPNo).css("left"));
-//    var boxPTop = parseInt($(boxPNo).css("top"));
-//    $(".p_container").animate({ scrollLeft: boxPLeft - 100 }, { queue: false, duration: 1000 });
-//    $(".p_container").animate({ scrollTop: boxPTop - 50 }, { queue: false, duration: 1000 });
-//    console.log(boxPLeft);
-//    console.log(boxPTop);
-//    
     currentReading++;
+    txtColor = txtColor + 10;
+    console.log(txtColor);
+    
+    
+    
+    openVideo('i2');
 }
+
+
+
 
 //=======
 //function changeText(onMouse) {
