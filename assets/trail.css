@@ -1,0 +1,124 @@
+@font-face {
+font-family: "Franklin-Gothic";
+src: url("ITCFGothicHvy.otf") format("opentype");
+font-style: heavy;
+}
+
+/*
+@font-face {
+font-family: "Arnhem-Blond";
+src: url("Arnhem-Blond.otf") format("opentype");
+}
+*/
+
+
+body {
+    font-family: "Franklin-Gothic", Helvetica, sans-serif;
+    padding: 5vh 0 0 0;
+    font-size: 15vw;
+/*    height: vh;*/
+}
+
+.firstContainer {
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+}
+
+
+.rep {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    top: -90vh;
+    line-height: 1em;
+/*    overflow-wrap: break-word;*/
+    text-align: center;
+    text-transform: uppercase;
+/*    vertical-align: middle;*/
+}
+
+.rep:hover {
+    color: red;
+    cursor: e-resize;
+}
+
+.dem {
+    height: 90vh;
+    width: 50%;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dem:hover {
+    color: blue;
+    cursor: w-resize;
+}
+
+.neu {
+    position: absolute;
+    top: 20vh;
+    left: 40vw;
+    width: 20vw;
+    height: 20vh;
+
+}
+
+.neu img {
+    width: 20vw;
+/*    z-index: -1;*/
+}
+
+.neu:hover {
+    color: darkgrey;
+    cursor: s-resize;
+}
+
+.neuTxt {
+    font-family: 'Sedgwick Ave', cursive;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 3vh;
+    width: 100%;
+}
+
+/*
+
+nav {
+    position: absolute;
+}
+
+.title {
+    padding-bottom: 50px;
+}
+
+ul {
+    line-height: 1.5;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-position: outside;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: 300px;
+    line-height: 1.5;
+}
+
+blockquote {
+    padding: 0;
+    margin: 1em 0 0 0;
+    text-indent: -0.5em;
+}
+
+.source {
+    font-size: 0.8em;
+}*/

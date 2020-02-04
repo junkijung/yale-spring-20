@@ -1,0 +1,55 @@
+/*
+@font-face {
+font-family: "Arnhem-Blond";
+src: url("Arnhem-BlondItalic.otf") format("opentype");
+font-style: italic;
+}
+
+@font-face {
+font-family: "Arnhem-Blond";
+src: url("Arnhem-Blond.otf") format("opentype");
+}
+*/
+
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 20px 0 0 30px;
+    font-size: 15pt;
+}
+
+nav {
+    position: absolute;
+}
+
+.title {
+    padding-bottom: 50px;
+}
+
+ul {
+    line-height: 1.5;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-position: outside;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: 300px;
+    line-height: 1.5;
+}
+
+blockquote {
+    padding: 0;
+    margin: 1em 0 0 0;
+    text-indent: -0.5em;
+}
+
+.source {
+    font-size: 0.8em;
+}
