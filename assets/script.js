@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var currentReading = 1;
 //
 //function backtoNormal(onMouse) {
@@ -67,3 +68,14 @@ function loadHTML() {
     currentReading++;
 }
 
+=======
+function changeText(onMouse) {
+  var i = document.getElementById(onMouse);
+  i.style.display = "inline";
+}
+
+function backtoNormal(onMouse) {
+  var i = document.getElementById(onMouse);
+  i.style.display = "none";
+}
+>>>>>>> 0f52d27f32ed3f94ec772ee5d4d7900aa05df7b2
