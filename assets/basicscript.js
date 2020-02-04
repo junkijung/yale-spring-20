@@ -19,22 +19,22 @@ $("document").ready(function() {
 //}
 
 
-function controlVideo(vidcontrol, divid) {
-var div = document.getElementById(divid);
-var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-iframe.postMessage('{"event":"command","func":"' + vidcontrol + '","args":""}', '*');
-}
-
-function openVideo(inum) {
-  var i = document.getElementById(inum);
-  if (i.style.display == "none") {
-    i.style.display = "block";
-    controlVideo('playVideo', inum);
-  } else {
-    i.style.display = "none";
-    controlVideo('stopVideo', inum);
-  }
-}
+//function controlVideo(vidcontrol, divid) {
+//var div = document.getElementById(divid);
+//var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+//iframe.postMessage('{"event":"command","func":"' + vidcontrol + '","args":""}', '*');
+//}
+//
+//function openVideo(inum) {
+//  var i = document.getElementById(inum);
+//  if (i.style.display == "none") {
+//    i.style.display = "block";
+//    controlVideo('playVideo', inum);
+//  } else {
+//    i.style.display = "none";
+//    controlVideo('stopVideo', inum);
+//  }
+//}
 
 
 $(function() {
@@ -82,7 +82,6 @@ function loadHTML() {
     
     
     
-    openVideo('i2');
 }
 
 
