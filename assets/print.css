@@ -1,0 +1,9 @@
+@media print {
+#home {
+  display: none;
+}
+.print {
+  font-size: 60px;
+}
+
+}

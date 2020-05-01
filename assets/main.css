@@ -12,44 +12,91 @@ src: url("Arnhem-Blond.otf") format("opentype");
 */
 
 body {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    padding: 20px 0 0 30px;
-    font-size: 15pt;
+    font-family: "Georgia", "Times New Roman", serif;
+    padding: 0;
+    margin: 0;
+    font-size: 20pt;
+    overflow: hidden;
 }
 
-nav {
-    position: absolute;
-}
 
 .title {
     padding-bottom: 50px;
 }
 
-ul {
-    line-height: 1.5;
+
+
+.item {
+    width: calc( 25vw );
+    height: 100vh;
+    line-height: 1.2;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    list-style-position: outside;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.imgContainer {
+    position: absolute;
+    top:0;
+    left: 0px;
+    height: 100%;
+    min-width: 100%;
+}
+
+.second img {
+    height: 100vh;    
+}
+
+.third {
+    background-image: url("../img/packet_thum.jpg");
+    background-size: cover;
+}
+
+.forth {
+    background-image: url("../img/site_thum.jpg");
+    background-size: cover;
+}
+
+.placeholder {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.contents {
+    padding: 10px 15px 30px 30px;
+    display: none;
+    overflow: auto;
 }
 
 a {
+    position: absolute;
+    padding-top: 10px;
+    display: block;
+    width: 100%;
+    height: calc(100% - 10px);
     text-decoration: none;
     color: black;
 }
 
+
 .container {
-    max-width: 800px;
-    margin-left: 300px;
-    line-height: 1.5;
+    width: 100vw;
+    display: flex;
 }
 
 blockquote {
     padding: 0;
     margin: 1em 0 0 0;
-    text-indent: -0.5em;
+    text-indent: -0.4em;
 }
 
 .source {
-    font-size: 0.8em;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.7em;
+    line-height: 1.3em;
+    text-indent: 0;
 }
