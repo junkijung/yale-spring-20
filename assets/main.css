@@ -39,6 +39,8 @@ body {
 }
 
 .imgContainer {
+
+    background-size: cover;
     position: absolute;
     top:0;
     left: 0px;
@@ -46,19 +48,9 @@ body {
     min-width: 100%;
 }
 
-.second img {
-    height: 100vh;    
-}
-
-.third {
-    background-image: url("../img/packet_thum.jpg");
-    background-size: cover;
-}
-
-.forth {
-    background-image: url("../img/site_thum.jpg");
-    background-size: cover;
-}
+.second {    background-image: url("../img/trail_thum.jpg");  }
+.third {     background-image: url("../img/packet_thum.jpg"); }
+.forth {     background-image: url("../img/site_thum.jpg"); }
 
 .placeholder {
     padding-top: 10px;
@@ -66,7 +58,7 @@ body {
 }
 
 .contents {
-    padding: 10px 15px 30px 30px;
+    padding: 10px 30px 30px 30px;
     display: none;
     overflow: auto;
 }
@@ -88,6 +80,7 @@ a {
 }
 
 blockquote {
+    font-size: 0.7em;
     padding: 0;
     margin: 1em 0 0 0;
     text-indent: -0.4em;
@@ -95,8 +88,7 @@ blockquote {
 
 .source {
     display: inline-block;
-    margin-top: 4px;
-    font-size: 0.7em;
+/*    margin-top: 4px;*/
     line-height: 1.3em;
     text-indent: 0;
 }
