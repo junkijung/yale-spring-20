@@ -53,8 +53,10 @@ body {
 .forth {     background-image: url("../img/site_thum.jpg"); }
 
 .placeholder {
-    padding-top: 10px;
+    font-size: 180px;
+    padding-top: 30px;
     padding-left: 30px;
+    line-height: 160px;
 }
 
 .contents {
